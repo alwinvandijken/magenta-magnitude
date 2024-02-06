@@ -1,5 +1,6 @@
 ---
-layout: ../../layouts/Layout.astro
+
+layout: ../../layouts/BaseLayout.astro
 title: Welkom
 description: 'Welkom op de website van B&B Bosserheide. Hier vindt u alle informatie over onze B&B en de omgeving.'
 
