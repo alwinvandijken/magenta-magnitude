@@ -1,20 +1,42 @@
 ---
+const pageTitle = "Over ons!";
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = false;
+
+const base = "red";
 ---
 
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
-    <title>Over ons</title>
+    <title>{pageTitle}</title>
 </head>
+<style define:vars={{base}}>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+    .skill {
+        color: var(--base);
+        font-weight: bold;
+    }
+</style>
 <body>
 <a href="/">Home</a>
 <a href="/nl/over-ons/">Over Ons</a>
 
-<h1>Over ons</h1>
+<h1>{pageTitle}</h1>
 <h2>... and my new Astro site!</h2>
+<p>My skills are:</p>
+<ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ul>
+
+{happy && <p>I am happy to be learning Astro!</p>}
 
 </body>
 </html>
