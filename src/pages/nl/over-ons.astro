@@ -1,10 +1,14 @@
 ---
+import '../../assets/styles/global.css'
+import Header from "../../components/Header.astro";
 const pageTitle = "Over ons!";
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = false;
 
 const base = "red";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="nl">
@@ -15,19 +19,19 @@ const base = "red";
     <meta name="generator" content={Astro.generator} >
     <title>{pageTitle}</title>
 </head>
-<style define:vars={{base}}>
+<style define:vars={{base, fontWeight, textCase}}>
     h1 {
         color: purple;
         font-size: 4rem;
     }
     .skill {
         color: var(--base);
-        font-weight: bold;
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
     }
 </style>
 <body>
-<a href="/">Home</a>
-<a href="/nl/over-ons/">Over Ons</a>
+<Header />
 
 <h1>{pageTitle}</h1>
 <h2>... and my new Astro site!</h2>
